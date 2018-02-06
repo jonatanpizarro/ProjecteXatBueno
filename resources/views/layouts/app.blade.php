@@ -37,6 +37,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
+                        <li><a id="botonMenu" href="{{ url('/home') }}">Home</a></li>
+                        <li><a id="botonMenu" href="{{ url('/chats') }}">Chats</a></li>
+                        <li><a id="botonMenu" href="{{ url('/denuncias') }}">Denuncias</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -70,10 +73,8 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
     </div>
-
+        @yield('content')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
