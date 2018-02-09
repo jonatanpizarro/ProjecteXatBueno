@@ -19,8 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/denuncias', 'DenunciaController@index');
+Route::get('denuncias', 'DenunciaController@index')->name('denuncias.index');
 
-Route::get('/denuncias/crear', 'DenunciaController@create');
+Route::get('denuncias/crear', 'DenunciaController@create')->name('denuncias.create');
 
-Route::get('/chat', 'ChatController@create');
+Route::post('denuncias', 'DenunciaController@store')->name('denuncias.store');
+
+Route::get('chat', 'ChatController@create')->name('chat');

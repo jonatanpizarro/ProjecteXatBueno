@@ -25,3 +25,11 @@
 body{
 	background: #aed6f1;
 }
+
+#banner{
+	height: 450px;
+}
+
+#divBanner{
+	text-align: center;
+}

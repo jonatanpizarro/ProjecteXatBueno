@@ -25,6 +25,7 @@ class CreacionDeTablas extends Migration
             $table->string('imagen');
             $table->integer('id_usuario')->unsigned();
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
+            $table->string('prioridad');
             $table->boolean('resuelto')->default(false);
             $table->timestamps();
         });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Denuncia;
 use Illuminate\Http\Request;
 
@@ -36,6 +37,19 @@ class DenunciaController extends Controller
     public function store(Request $request)
     {
         //
+        $a = new Denuncia();
+        $a->text = $request->input('textoFormulario');
+
+        $path = $request->input('imagenFormulario')->getRealPath();
+        echo $path;
+
+        $a->imagen = $request->input('imagenFormulario');
+        $a->id_usuario = Auth::id();
+        $a->prioridad = $request->input('optionsRadios');
+        $a->resuelto = false;
+        $a->save();
+
+
     }
 
     /**
