@@ -70,8 +70,11 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ url('/chats') }}">Chats</a>
+                        <a href="{{ url('/chat') }}">Chats</a>
                         <a href="{{ url('/denuncias') }}">Denuncias</a>
+                        <a href="{{ url() }}">Debates</a>
+                        <a href="{{ url() }}">Noticias</a>
+
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
