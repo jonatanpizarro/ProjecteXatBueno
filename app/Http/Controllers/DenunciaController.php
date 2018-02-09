@@ -14,7 +14,7 @@ class DenunciaController extends Controller
      */
     public function index()
     {
-        //
+        return view('denuncia.denuncias');
     }
 
     /**
@@ -24,7 +24,7 @@ class DenunciaController extends Controller
      */
     public function create()
     {
-        //
+        return view('denuncia.crearDenuncias');
     }
 
     /**

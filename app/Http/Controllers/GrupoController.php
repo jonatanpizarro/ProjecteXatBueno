@@ -14,7 +14,7 @@ class GrupoController extends Controller
      */
     public function index()
     {
-        //
+        return view('grupo.grupos')
     }
 
     /**
