@@ -23,8 +23,3 @@ Breadcrumbs::register('crear', function ($breadcrumbs) {
     $breadcrumbs->push('Crear Denuncias', route('crear'));
 });
 
-// Home > Blog > [Category] > [Post]
-Breadcrumbs::register('post', function ($breadcrumbs, $post) {
-    $breadcrumbs->parent('category', $post->category);
-    $breadcrumbs->push($post->title, route('post', $post));
-});

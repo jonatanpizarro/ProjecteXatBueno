@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('images/pageLoader.') }}" rel="stylesheet">
+    <link href="{{ asset('images/pageLoader.gif') }}" rel="stylesheet">
     <style type="text/css">
             
         ul.menu{
