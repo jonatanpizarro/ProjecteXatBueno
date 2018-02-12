@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Denuncia;
+use App\Grupo;
 use Illuminate\Http\Request;
 
-class DenunciaController extends Controller
+class GrupoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DenunciaController extends Controller
      */
     public function index()
     {
-        return view('denuncia.denuncias');
+        return view('grupo.grupos')
     }
 
     /**
@@ -24,7 +24,7 @@ class DenunciaController extends Controller
      */
     public function create()
     {
-        return view('denuncia.crearDenuncias');
+        //
     }
 
     /**
@@ -41,12 +41,34 @@ class DenunciaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Denuncia  $denuncia
+     * @param  \App\Grupo  $grupo
      * @return \Illuminate\Http\Response
      */
-    public function show(Denuncia $denuncia)
+    public function show(Grupo $grupo)
     {
         //
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Grupo  $grupo
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Grupo $grupo)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Grupo  $grupo
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Grupo $grupo)
+    {
+        //
+    }
 }

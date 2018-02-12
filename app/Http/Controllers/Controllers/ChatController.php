@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Denuncia;
+use App\Chat;
 use Illuminate\Http\Request;
 
-class DenunciaController extends Controller
+class ChatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DenunciaController extends Controller
      */
     public function index()
     {
-        return view('denuncia.denuncias');
+        return view('chat.chat');
     }
 
     /**
@@ -24,7 +24,7 @@ class DenunciaController extends Controller
      */
     public function create()
     {
-        return view('denuncia.crearDenuncias');
+        //
     }
 
     /**
@@ -41,10 +41,33 @@ class DenunciaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Denuncia  $denuncia
+     * @param  \App\Chat  $chat
      * @return \Illuminate\Http\Response
      */
-    public function show(Denuncia $denuncia)
+    public function show(Chat $chat)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Chat  $chat
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Chat $chat)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Chat  $chat
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Chat $chat)
     {
         //
     }

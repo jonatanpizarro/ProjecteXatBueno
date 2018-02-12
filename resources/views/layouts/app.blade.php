@@ -12,8 +12,44 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('images/pageLoader.') }}" rel="stylesheet">
+    <style type="text/css">
+            
+        ul.menu{
+            list-style: none;
+        }
+
+        ul.menu ul{
+            display: none;
+            list-style: none;
+        }
+        ul.menu li:hover > ul{
+            display: block;
+        }
+        .loader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url('images/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+        opacity: .8;    }
+    </style>
+       
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+         <script type="text/javascript">
+         $(window).load(function() {
+                 $(".loader").fadeOut("slow");
+            });
+    </script>
+
+    </style>
 </head>
 <body>
+    <div class="loader">
+    </div>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -35,11 +71,17 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav menu">
                         &nbsp;
                         <li><a id="botonMenu" href="{{ url('/home') }}">Home</a></li>
-                        <li><a id="botonMenu" href="{{ url('/chats') }}">Chats</a></li>
-                        <li><a id="botonMenu" href="{{ url('/denuncias') }}">Denuncias</a></li>
+                        <li><a id="botonMenu" href="{{ url('/chat') }}">Chats</a></li>
+                        <li><a id="botonMenu" href="{{ url('/denuncias') }}">Denuncias</a>
+                            <ul>
+                                <li><a id="botonMenu" href="{{ url('/denuncias/crear') }}">Creare denuncia</a></li>
+                            </ul>             
+                            </li>               
+                        <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
+                        <li><a id="botonMenu" href="{{ url('/chat') }}">Noticias</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -70,6 +112,9 @@
                             </li>
                         @endguest
                     </ul>
+                    
+                    
+                    
                 </div>
             </div>
         </nav>
@@ -77,5 +122,6 @@
         @yield('content')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    
 </body>
 </html>

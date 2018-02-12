@@ -1,22 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
+{{ Breadcrumbs::render('home') }}
 <div class="container">
     <div class="row">
         <div class="col-md-3">
             <div class="panel panel-default">
-                <div id="divBanner" class="panel-heading"><b>Datos Usuario</b></div>
+                <div class="panel-heading">Datos Usuario</div>
 
                 <div class="panel-body">
+                
                     <p>Usuario: Cliente</p>
-                    <p>Nombre: Genis</p>
-                    <p>Email: gtorres@gmail.com</p>
+                    <p>Nombre: {{Auth::user() -> name}}</p>
+                    <p>Email: {{Auth::user() -> email}}</p>
+               
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6">
             <div class="panel panel-default">
-                <div id="divBanner" class="panel-heading"><b>Bienvenido!!</b></div>
+                <div class="panel-heading">Bienvenido!!</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -29,12 +32,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="panel panel-default">
-                <div id="divBanner" class="panel-heading"><b>Banner</b></div>
-                    
+                <div class="panel-heading">Banner</div>
+
                 <div class="panel-body">
-                    <img id="banner" class="img-responsive" src="{{asset('imagenes/banner.jpg')}}">
+                    
                 </div>
             </div>
         </div>

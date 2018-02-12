@@ -17,19 +17,7 @@
 	color: white;
 }
 
-.active{
-	background: #29465e;
-	color: white;
-}
 
 body{
 	background: #aed6f1;
-}
-
-#banner{
-	height: 450px;
-}
-
-#divBanner{
-	text-align: center;
 }
