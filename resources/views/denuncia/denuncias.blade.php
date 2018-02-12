@@ -2,22 +2,32 @@
 @section('content')
 {{ Breadcrumbs::render('denuncia') }}
 
-<div class="container " style=" background-color: green;">  
+<div class="container d-flex justify-content-center ">
+  <div class="row" > 
+    
+    <div class="col-md-10" style="background-color: white;">
 
+      @foreach( $arrayDenuncias as $key => $denuncia )
+        <p>
+          {{$denuncia['imagen']}}
+          
+          {{$denuncia['text']}}
+        </p>
+      @endforeach
+    
+    </div>
 
+    <div class="col-md-2">
+      <div class="panel panel-default">
+          <div id="divBanner" class="panel-heading"><b>Banner</b></div>
+              
+          <div class="panel-body">
+              <img id="banner" class="img-responsive" src="{{asset('imagenes/banner.jpg')}}">
+          </div>
+      </div>
+    </div>
 
-
-</div>
-
-<div class="container  mt-5">
-        <div class="col-md-1"></div>
-        <div class="col-md-10 ">
-            <div class="panel panel-default">
-                
-
-                <div class="panel-body">
-                  <h1>Coming soon</h1>
-        </div>
+  </div>
 </div>
 
 @endsection

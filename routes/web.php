@@ -24,3 +24,5 @@ Route::get('/denuncias', 'DenunciaController@index')->name('denuncias');
 Route::get('/denuncias/crear', 'DenunciaController@create')->name('crear');
 
 Route::get('/chat', 'ChatController@index')->name('chat');
+
+Route::post('denuncias', 'DenunciaController@store');
