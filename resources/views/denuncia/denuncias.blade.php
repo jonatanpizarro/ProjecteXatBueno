@@ -6,6 +6,7 @@
   <div class="row" > 
     
     <div class="col-md-10" style="background-color: white;">
+<<<<<<< HEAD
       <h1>Denuncias Realizadas</h1>
       <hr>
       
@@ -19,6 +20,15 @@
           <br>
         </div>
         <br>
+=======
+
+      @foreach( $arrayDenuncias as $key => $denuncia )
+        <p>
+          {{$denuncia['imagen']}}
+          
+          {{$denuncia['text']}}
+        </p>
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
       @endforeach
     
     </div>
@@ -28,7 +38,11 @@
           <div id="divBanner" class="panel-heading"><b>Banner</b></div>
               
           <div class="panel-body">
+<<<<<<< HEAD
               <img id="banner" class="img-responsive" src="{{asset('images/banner.jpg')}}">
+=======
+              <img id="banner" class="img-responsive" src="{{asset('imagenes/banner.jpg')}}">
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
           </div>
       </div>
     </div>

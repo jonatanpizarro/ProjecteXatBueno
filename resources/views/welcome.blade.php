@@ -70,6 +70,14 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+<<<<<<< HEAD
+=======
+                        <a href="{{ url('/chat') }}">Chats</a>
+                        <a href="{{ url('/denuncias') }}">Denuncias</a>
+                        <a href="{{ url() }}">Debates</a>
+                        <a href="{{ url() }}">Noticias</a>
+
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -93,3 +101,7 @@
         </div>
     </body>
 </html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1

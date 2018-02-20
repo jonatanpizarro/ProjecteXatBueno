@@ -11,16 +11,27 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () { return view('welcome'); });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('home', 'HomeController@index')->name('home');
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
 
 Route::get('/denuncias', 'DenunciaController@index')->name('denuncias');
 
 Route::get('/denuncias/crear', 'DenunciaController@create')->name('crear');
 
+<<<<<<< HEAD
 Route::post('/denuncias/comentar', 'DenunciaController@comentar')->name('crear');
 
 
@@ -46,3 +57,8 @@ Route::post('responder', 'DenunciaController@store');
 Route::get('/chat', 'ChatController@index')->name('chat');
 
 Route::post('chat', 'ChatController@store');
+=======
+Route::get('/chat', 'ChatController@index')->name('chat');
+
+Route::post('denuncias', 'DenunciaController@store');
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1

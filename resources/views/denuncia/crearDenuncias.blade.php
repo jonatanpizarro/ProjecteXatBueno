@@ -5,12 +5,20 @@
     <div class="row" >
       <div class="col-md-10 offset-md-2" style="background-color: white;">
         
+<<<<<<< HEAD
         <form action="{{url('denuncias')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
           <h1>Redacte su denundia</h1>
           <hr>
           <div class="form-group">
             <label for="exampleTextarea">Descripcion</label>
+=======
+        <form action="{{url('denuncias')}}" method="POST">
+        {{ csrf_field() }}
+
+          <div class="form-group">
+            <label for="exampleTextarea">Redacte su denuncia</label>
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
             <textarea class="form-control" id="exampleTextarea" rows="3" name="textoFormulario"></textarea>
           </div>
           <div class="form-group">
@@ -50,7 +58,11 @@
                 <div id="divBanner" class="panel-heading"><b>Banner</b></div>
                     
                 <div class="panel-body">
+<<<<<<< HEAD
                     <img id="banner" class="img-responsive" src="{{asset('images/banner.jpg')}}">
+=======
+                    <img id="banner" class="img-responsive" src="{{asset('imagenes/banner.jpg')}}">
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
                 </div>
             </div>
         </div>

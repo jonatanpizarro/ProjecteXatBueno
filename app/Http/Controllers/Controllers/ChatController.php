@@ -2,13 +2,7 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Auth;
-use App\Grupos;
-=======
 use App\Chat;
->>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
 use Illuminate\Http\Request;
 
 class ChatController extends Controller
@@ -20,12 +14,7 @@ class ChatController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $grupos = Grupos::All();
-        return view('chat.chat', ['arrayGrupos' => $grupos]);
-=======
         return view('chat.chat');
->>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
     }
 
     /**
@@ -35,11 +24,7 @@ class ChatController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-        //return view('chat.chat');
-=======
         //
->>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
     }
 
     /**
@@ -50,15 +35,6 @@ class ChatController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        $a = new Grupos();
-        $a->nom = $request->input('nombre');
-        $a->id_usuario = Auth::id();
-        $a->save();
-        
-        return redirect()->action('ChatController@index');
-    }
-=======
         //
     }
 
@@ -96,5 +72,4 @@ class ChatController extends Controller
         //
     }
 
->>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
 }

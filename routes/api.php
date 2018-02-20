@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Mensajes;
+=======
+
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,6 +20,7 @@ use App\Mensajes;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+<<<<<<< HEAD
 
 
 Route::get("mensajes", function(Request $request){
@@ -23,3 +28,5 @@ Route::get("mensajes", function(Request $request){
 	return $ListaMensajes;
 });
 
+=======
+>>>>>>> 9c18da2fd4a9a14ffc85a5301e9c9aea5f0f93e1
